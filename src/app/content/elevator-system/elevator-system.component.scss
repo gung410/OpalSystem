@@ -1,0 +1,39 @@
+.building{
+    min-height: 45em ;
+    min-width : 100%;
+    background-color: chocolate;
+    display: inline-flex;
+
+}
+.floor-one
+{
+    float: left;
+    min-width:  20%;
+    min-height: 50em;
+    margin-left: 3em;
+    background-color: blue;
+}
+.floor-two{
+    @extend .floor-one;
+    background-color: red;
+
+}
+.elevator{
+    width: auto;
+    height: 4em;
+    margin: 2em;
+    padding: 2em;
+
+}
+.floor__color{
+    @extend .elevator;
+    &--yellow{
+        @extend .elevator;
+        background-color: yellow;
+
+    }
+    &--yellowgreen{
+        @extend .elevator;
+        background-color: yellowgreen;
+    }
+}

@@ -1,0 +1,14 @@
+.body{
+    height: 40em;
+    width: 40em;
+    background-color: blue;
+    &__head{
+     margin: 10em;
+     height: 30em;
+     width: 30em;
+     &--brown{
+        background-color: brown;
+
+     }
+    }
+}

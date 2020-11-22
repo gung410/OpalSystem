@@ -1,0 +1,34 @@
+<div class="building">
+    <div class="floor-one">
+        <div *ngFor="let numberElevator of numberElevatorOne">
+          <div *ngIf="numberElevator.status">
+            <div class="floor__color--yellow ">
+              {{numberElevator.status}}
+            </div>
+      
+          </div>
+          <div *ngIf="!numberElevator.status">
+            <div class="floor__color--yellowgreen ">
+              {{numberElevator.status}}
+            </div>
+      
+          </div>
+        </div>
+    </div>
+    <div class="floor-two">
+        <div *ngFor="let numberElevator of list">
+          <div *ngIf="numberElevator.status">
+            <div class="floor__color--yellow ">
+              {{numberElevator.status}}
+            </div>
+      
+          </div>
+          <div *ngIf="!numberElevator.status">
+            <div class="floor__color--yellowgreen ">
+              {{numberElevator.status}}
+            </div>
+      
+          </div>
+        </div>
+    </div>
+</div>
