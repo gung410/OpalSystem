@@ -1,0 +1,23 @@
+$padding-size:1.5em ; //biến toàn cục 
+.text{
+    text-align: center;
+}
+.Body-father{
+    background-color:#d11e1e;
+    height : 25em;
+    width : 25em;
+    margin: 4em;
+    padding: $padding-size;
+    .btn-select{   //---- cái này giống class="body-father btn-select"
+        @extend .text ;
+       background-color: rgb(209, 241, 25);
+       height: 2.5em ;
+       width: 2.5em ;
+       margin: 2.5em;
+       padding: 10px;
+    }
+    .btn-enter
+    {
+
+    }
+}

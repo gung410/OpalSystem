@@ -15,6 +15,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PractiveScssComponent } from './content/practive-scss/practive-scss.component';
 import { ElevatorSystemComponent } from './content/elevator-system/elevator-system.component';
+import { TemplateScssSelectTableComponent } from './content/template-scss-select-table/template-scss-select-table.component';
+import { ButtonSelectComponent } from './content/template-scss-select-table/button-select/button-select.component';
+import { TestMapFilterReduceComponent } from './content/test-map-filter-reduce/test-map-filter-reduce.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ElevatorSystemComponent } from './content/elevator-system/elevator-syst
     ShowDialogComponent,
     ShowDialogPopupComponent,
     PractiveScssComponent,
-    ElevatorSystemComponent
+    ElevatorSystemComponent,
+    TemplateScssSelectTableComponent,
+    ButtonSelectComponent,
+    TestMapFilterReduceComponent
   ],
   imports: [
     BrowserModule,

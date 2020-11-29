@@ -9,7 +9,7 @@ import { elevator } from './elevator.model';
 
 export class ElevatorSystemComponent implements OnInit {
 
-  list: any[] = []
+  list:any = []
   constructor() { }
   numberElevatorOne: any[] = [
     {
@@ -59,43 +59,43 @@ export class ElevatorSystemComponent implements OnInit {
   ];
   numberElevatorTwo: any[] = [
     {
-      floor: 10,
+      floor: '10',
       status: false
     },
     {
-      floor: 9,
+      floor: '9',
       status: false
     },
     {
-      floor: 8,
+      floor: '8',
       status: false
     },
     {
-      floor: 7,
+      floor: '7',
       status: false
     },
     {
-      floor: 6,
+      floor: '6',
       status: false
     },
     {
-      floor: 5,
+      floor: '5',
       status: false
     },
     {
-      floor: 4,
+      floor: '4',
       status: false
     },
     {
-      floor: 3,
+      floor: '3',
       status: false
     },
     {
-      floor: 2,
+      floor: '2',
       status: false
     },
     {
-      floor: 1,
+      floor: '1',
       status: false
     },
     {
@@ -105,18 +105,30 @@ export class ElevatorSystemComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    const stopStage = 4;
+    const stopStage = 10;
     this.list = this.numberElevatorTwo;
-
-    for (let i = 0; i < stopStage; i++) {
-
-
+    
+    for (let i = 10; i >= 0 ; i--) {
       setTimeout(
         () => {
-          this.list[i].status = true;
-          if (i !== 0 || i) {
-            this.list[i - 1].status = false;
-          }
+            if(i===10)
+            {
+              for (let i = 10; i >= 0 ; i--) {
+                setTimeout(
+                  () => {
+                      this.list[i].status = true;
+                      if (i !== 0 || i) {
+                        this.list[i-1].status = false;
+                      }
+                   
+                  }, 1000 * (i + 1)
+                );
+              }
+            }
+            this.list[stopStage-i].status = true;
+            if (i !== 0 || i) {
+              this.list[stopStage-i+1].status = false;
+            }
         }, 1000 * (i + 1)
       );
     }
@@ -157,12 +169,7 @@ export class ElevatorSystemComponent implements OnInit {
   //      }
 
   //   );
-
-
   // }
 
-
-  // }
-
-
+  // 
 }
