@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
@@ -18,6 +17,12 @@ import { ElevatorSystemComponent } from './content/elevator-system/elevator-syst
 import { TemplateScssSelectTableComponent } from './content/template-scss-select-table/template-scss-select-table.component';
 import { ButtonSelectComponent } from './content/template-scss-select-table/button-select/button-select.component';
 import { TestMapFilterReduceComponent } from './content/test-map-filter-reduce/test-map-filter-reduce.component';
+import { TestApiComponent } from './content/test-api/test-api.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+import { SimulateAccountUserListComponent } from './content/simulate-account-user-list/simulate-account-user-list.component';
+import { UserListComponent } from './content/simulate-account-user-list/user-list/user-list.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,13 @@ import { TestMapFilterReduceComponent } from './content/test-map-filter-reduce/t
     ElevatorSystemComponent,
     TemplateScssSelectTableComponent,
     ButtonSelectComponent,
-    TestMapFilterReduceComponent
+    TestMapFilterReduceComponent,
+    TestApiComponent,
+    TestApiComponent,
+    SimulateAccountUserListComponent,
+    UserListComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -40,7 +51,10 @@ import { TestMapFilterReduceComponent } from './content/test-map-filter-reduce/t
     AgGridModule.withComponents([]),
     BrowserAnimationsModule,
     MatDialogModule,
-    NgSelectModule
+    NgSelectModule,
+    MatInputModule,
+    MatMenuModule,
+    MatTabsModule
 
   ],
   providers: [],
