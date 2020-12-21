@@ -11,5 +11,8 @@ export class TemplateScssSelectTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  new(event)
+  {
+ console.log(event)
+  }
 }

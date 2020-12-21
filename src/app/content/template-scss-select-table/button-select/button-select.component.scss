@@ -8,7 +8,11 @@
         text-align: center;
         border-radius : 2em ;
         display: inline-block;
+        &.btn-hover:hover{
+            background-color: #8787c5;
+        }
     }
+    
  }
  @mixin box-size($h,$w) //tạo 1 hàm chứa 2 tham số 
  {

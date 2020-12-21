@@ -24,7 +24,9 @@
       
           </div>
           <div *ngIf="!numberElevator.status">
-            <div class="floor__color--yellowgreen ">
+            <div class="floor__color--yellowgreen "
+            (buttonSelect)="getOutPut($event)"
+            >
               {{numberElevator.floor}}
             </div>
           </div>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AgridListAddDropdowmInHeaderComponent } from './content/agrid-list-add-dropdowm-in-header/agrid-list-add-dropdowm-in-header.component';
 import { DropdownComponent } from './content/dropdown/dropdown.component';
 import { ElevatorSystemComponent } from './content/elevator-system/elevator-system.component';
+import { HeroTourComponent } from './content/hero-tour/hero-tour.component';
 import { PractiveScssComponent } from './content/practive-scss/practive-scss.component';
 import { SimulateAccountUserListComponent } from './content/simulate-account-user-list/simulate-account-user-list.component';
 import { TemplateScssSelectTableComponent } from './content/template-scss-select-table/template-scss-select-table.component';
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
       path:'SimulateAccountUserList',
       component:SimulateAccountUserListComponent
+  },
+  {
+      path:'HeroTour',
+      component:HeroTourComponent
   },
 ];
 

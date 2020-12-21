@@ -23,6 +23,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { SimulateAccountUserListComponent } from './content/simulate-account-user-list/simulate-account-user-list.component';
 import { UserListComponent } from './content/simulate-account-user-list/user-list/user-list.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { HeroTourComponent } from './content/hero-tour/hero-tour.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     TestApiComponent,
     SimulateAccountUserListComponent,
     UserListComponent,
-    
+    HeroTourComponent
 
   ],
   imports: [

@@ -105,6 +105,7 @@ export class ElevatorSystemComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+    
     const stopStage = 10;
     this.list = this.numberElevatorTwo;
     
@@ -132,7 +133,7 @@ export class ElevatorSystemComponent implements OnInit {
         }, 1000 * (i + 1)
       );
     }
-
+    
 
 
     // this.list.forEach((stage, index) => {
@@ -172,4 +173,9 @@ export class ElevatorSystemComponent implements OnInit {
   // }
 
   // 
+  getOutPut(event)
+    {
+      console.log('getoutput')
+      console.log(event)
+    }
 }

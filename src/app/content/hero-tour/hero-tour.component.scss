@@ -1,0 +1,17 @@
+.hero{
+    background-color: #a796e4;
+    height: auto;
+    padding: 2em;
+    margin: 5em;
+    width: 20em;
+    &.character{
+        list-style-type: none;
+        background-color: #7ab7f1;
+        width: auto;
+        margin: 2em;
+        &.character_hover:hover{
+            background-color: salmon;
+        }
+    }
+   
+}

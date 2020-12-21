@@ -1,4 +1,7 @@
-<div class="btn-select btn-decorate" *ngFor="let item of btnElevator">
+<div class="btn-select btn-decorate btn-hover" 
+*ngFor="let item of btnElevator"
+(click)="SelectFloor(item.number)"
+>
         {{item.number}}
 </div>
 <!-- <div class="test">
