@@ -24,6 +24,8 @@ import { SimulateAccountUserListComponent } from './content/simulate-account-use
 import { UserListComponent } from './content/simulate-account-user-list/user-list/user-list.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HeroTourComponent } from './content/hero-tour/hero-tour.component';
+import { HeroDetailComponent } from './content/hero-tour/hero-detail/hero-detail.component';
+import { HeroMessageComponent } from './content/hero-tour/hero-message/hero-message.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { HeroTourComponent } from './content/hero-tour/hero-tour.component';
     TestApiComponent,
     SimulateAccountUserListComponent,
     UserListComponent,
-    HeroTourComponent
+    HeroTourComponent,
+    HeroDetailComponent,
+    HeroMessageComponent
 
   ],
   imports: [

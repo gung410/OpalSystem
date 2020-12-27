@@ -1,5 +1,8 @@
+<app-hero-detail [displayHero]="displayHero"></app-hero-detail>
+<app-hero-message ></app-hero-message>
 <ul class="hero">
-    <li class="hero character character_hover" *ngFor="let item of hero">
+    <li class="hero character character_hover" *ngFor="let item of allHero" (click)="selectHero(item)">
         {{item.name}}
     </li>
 </ul>
+

@@ -1,0 +1,8 @@
+<div *ngIf="messageService.message.length">
+    <button (click)="messageService.clear()" class="btn btn-primary">
+        Clear
+    </button>
+    <span>
+        {{messageService.message}}
+    </span>
+</div>
