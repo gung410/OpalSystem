@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button-select',
@@ -8,7 +8,7 @@ import { EventEmitter } from 'protractor';
 })
 export class ButtonSelectComponent implements OnInit {
 
-   @Output() buttonSelect ;
+ @Output() buttonSelect = new EventEmitter();
   constructor() { }
   btnElevator : any[] =[
     {
@@ -61,6 +61,8 @@ export class ButtonSelectComponent implements OnInit {
   }
   SelectFloor(event)
   {
+     console.log('SelectFloor')
      console.log(event)
+     this.buttonSelect.emit(event)
   }
 }

@@ -1,7 +1,6 @@
 import { normalizeGenFileSuffix } from '@angular/compiler/src/aot/util';
 import { Component, OnInit } from '@angular/core';
 import { ColDef, ColDefUtil } from 'ag-grid-community';
-import { DropdownComponent } from '../practice/dropdown/dropdown.component';
 
 @Component({
   selector: 'app-agrid-list-add-dropdowm-in-header',

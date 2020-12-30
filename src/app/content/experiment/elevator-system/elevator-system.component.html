@@ -25,12 +25,14 @@
           </div>
           <div *ngIf="!numberElevator.status">
             <div class="floor__color--yellowgreen "
-            (buttonSelect)="getOutPut($event)"
             >
               {{numberElevator.floor}}
             </div>
           </div>
         </div>
     </div>
-    <app-template-scss-select-table></app-template-scss-select-table>
+    <app-template-scss-select-table
+    >
+    </app-template-scss-select-table>
+
 </div>

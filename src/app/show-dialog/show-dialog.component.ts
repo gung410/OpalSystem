@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { ShowDialogPopupComponent } from '../content/show-dialog-popup/show-dialog-popup.component';
+import { ShowDialogPopupComponent } from '../content/practice/show-dialog-popup/show-dialog-popup.component';
 
 @Component({
   selector: 'app-show-dialog',

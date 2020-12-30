@@ -15,4 +15,10 @@ export class TemplateScssSelectTableComponent implements OnInit {
   {
  console.log(event)
   }
+  getOutPut(event)
+  {
+    console.log('getOutPut')
+    console.log(event)
+
+  }
 }
