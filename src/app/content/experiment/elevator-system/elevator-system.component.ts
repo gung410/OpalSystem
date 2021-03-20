@@ -10,6 +10,8 @@ import { elevator } from './elevator.model';
 export class ElevatorSystemComponent implements OnInit {
 
   list:any = []
+  stopStage : number =10 
+
   constructor() { }
   numberElevatorOne: any[] = [
     {
@@ -103,38 +105,8 @@ export class ElevatorSystemComponent implements OnInit {
       status: false
     },
   ];
-
   ngOnInit(): void {
-    
-    const stopStage = 10;
-    this.list = this.numberElevatorTwo;
-    
-    for (let i = 10; i >= 0 ; i--) {
-      setTimeout(
-        () => {
-            if(i===10)
-            {
-              for (let i = 10; i >= 0 ; i--) {
-                setTimeout(
-                  () => {
-                      this.list[i].status = true;
-                      if (i !== 0 || i) {
-                        this.list[i-1].status = false;
-                      }
-                   
-                  }, 1000 * (i + 1)
-                );
-              }
-            }
-            this.list[stopStage-i].status = true;
-            if (i !== 0 || i) {
-              this.list[stopStage-i+1].status = false;
-            }
-        }, 1000 * (i + 1)
-      );
-    }
-    
-
+    this.moveElevatorfloor();
 
     // this.list.forEach((stage, index) => {
     //   setTimeout(
@@ -146,7 +118,48 @@ export class ElevatorSystemComponent implements OnInit {
     // });
     //  this.selectFloor()
   }
+ private moveFirstToLast()
+ {
+  this.list = this.numberElevatorTwo;
+  for(let i = 10 ; i >=0; i--)
+  {
+      setTimeout(()=>{
+      this.list[i].status =true;
+      if(i!=0 || i)
+      {
+      this.list[i-1].status=false ;
+      }
+    },1000* ( i + 1)
+    )
 
+   
+  }
+
+ }
+ private async  moveLastTofirst()
+ {
+  
+ }
+ private moveElevatorfloor()
+ {
+  this.list = this.numberElevatorTwo;
+  for (let i = 10; i >= 0 ; i--) {
+    setTimeout(
+      () => {
+          if(i===10)
+          {
+            this.moveFirstToLast()
+          }
+          this.list[this.stopStage-i].status = true;
+          if (i !== 0 || i) {
+            this.list[this.stopStage-i+1].status = false;
+          }
+
+
+      }, 1000 * (i + 1)
+    );
+  }
+ }
   // selectFloor()
   // {
   // for(let i = 0 ; i< this.list.length ; i++)
